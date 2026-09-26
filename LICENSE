@@ -1,0 +1,63 @@
+MIT License
+
+Copyright (c) 2026 xmr876
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+适用范围说明
+================================================================================
+
+本许可证覆盖本仓库中的以下内容：
+
+  · firmware/    固件源码
+  · tools/       构建与验证工具
+  · docs/        文档
+  · hardware/    PCB 工程文件（原理图、PCB 布局）
+  · README.md 及其他说明文件
+
+--------------------------------------------------------------------------------
+不覆盖的内容
+--------------------------------------------------------------------------------
+
+音色库 TimGM6mb（TimGM6mb.sf2）**不在本许可证范围内**。
+
+它是第三方作品，版权归原作者所有，本仓库不分发该文件。
+构建时需自行下载，并遵守其原始授权条款。下载链接见 README「音色库」一节。
+
+--------------------------------------------------------------------------------
+免责声明
+--------------------------------------------------------------------------------
+
+本项目是个人爱好作品，按「现状」提供，不对以下情况作任何担保：
+
+  · 硬件设计的安全性、可靠性、电磁兼容性
+  · 用于商业产品时的合规性
+  · 因使用本项目造成的任何设备损坏或数据损失
+
+**打样、生产、商用前请自行完成必要的验证与合规评估。**
+
+--------------------------------------------------------------------------------
+第三方组件
+--------------------------------------------------------------------------------
+
+  · RP2350 / pico-sdk        Raspberry Pi Ltd.，BSD-3-Clause
+  · PCM5102A                 Texas Instruments
+  · 6N138                    Vishay / 各厂商
+  · TimGM6mb SoundFont       见上文说明

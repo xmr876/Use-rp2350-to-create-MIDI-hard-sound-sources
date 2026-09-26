@@ -1,0 +1,70 @@
+# ==================================================================
+# GMSS 硬音源 — .gitignore
+# ==================================================================
+# 这个目录里有一千多 MB 的构建产物和工具链，绝大部分不能进仓库。
+#
+# 仓库只包含：
+#     firmware/   固件源码
+#     tools/      构建与验证工具
+#     docs/       文档
+#     hardware/   PCB 工程文件
+#     build/release/*.uf2   可直接烧录的正式固件
+#
+# ★ gitignore 的两条规则（上一版就是栽在这上面）：
+#     1. 最后匹配的规则生效 —— 通配和否定规则的顺序很关键。
+#        顺序写错会把想保留的文件也排掉（正式固件就被排过一次）。
+#     2. 对已经跟踪的文件无效 —— 改完这里还要用
+#        git rm --cached <file> 把已经进去的文件移出索引。
+#
+# ★ 这个文件必须存成 UTF-8。用 PowerShell 的 Add-Content 追加中文
+#    会写成 GBK，git 读不了（报 invalid UTF-8），整个忽略规则静默失效。
+
+# 工具链（629 MB）—— 各人自己装
+toolchain/
+
+# 整个 build/ 默认排除
+build/
+
+# 只放行可直接烧录的正式固件
+!build/release/
+build/release/*
+!build/release/GMSS_TimGM6mb_一次烧录.uf2
+!build/release/GMSS_精简版_无显示无按键.uf2
+
+# 音色库源文件（TimGM6mb.sf2，5.7 MB）—— 第三方作品，不随仓库分发
+# 下载链接见 README「音色库」一节
+build/sf2/
+build/font_adpcm/
+
+# 视频 / 图片素材（793 MB）
+build/video/
+build/crops/
+*.mp4
+*.mov
+*.avi
+
+# 测试残留（每次跑 pytest 生成几十个）
+tools/gmss/tests/tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 临时文件
+*.tmp
+*.log
+_scratch/
+scratch/
